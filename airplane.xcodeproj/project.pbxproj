@@ -16,6 +16,13 @@
 		942815FD1AB3F496004EE6DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942815FC1AB3F496004EE6DF /* Images.xcassets */; };
 		942816001AB3F496004EE6DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942815FE1AB3F496004EE6DF /* LaunchScreen.xib */; };
 		9428160C1AB3F496004EE6DF /* airplaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9428160B1AB3F496004EE6DF /* airplaneTests.m */; };
+		9428161C1AB3F786004EE6DF /* airPlanesBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 942816151AB3F786004EE6DF /* airPlanesBackground.png */; };
+		9428161D1AB3F786004EE6DF /* PLANE 8 L.png in Resources */ = {isa = PBXBuildFile; fileRef = 942816161AB3F786004EE6DF /* PLANE 8 L.png */; };
+		9428161E1AB3F786004EE6DF /* PLANE 8 N.png in Resources */ = {isa = PBXBuildFile; fileRef = 942816171AB3F786004EE6DF /* PLANE 8 N.png */; };
+		9428161F1AB3F786004EE6DF /* PLANE 8 R.png in Resources */ = {isa = PBXBuildFile; fileRef = 942816181AB3F786004EE6DF /* PLANE 8 R.png */; };
+		942816201AB3F786004EE6DF /* PLANE 8 SHADOW.png in Resources */ = {isa = PBXBuildFile; fileRef = 942816191AB3F786004EE6DF /* PLANE 8 SHADOW.png */; };
+		942816211AB3F786004EE6DF /* PLANE PROPELLER 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9428161A1AB3F786004EE6DF /* PLANE PROPELLER 1.png */; };
+		942816221AB3F786004EE6DF /* PLANE PROPELLER 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9428161B1AB3F786004EE6DF /* PLANE PROPELLER 2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		942816051AB3F496004EE6DF /* airplaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airplaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9428160A1AB3F496004EE6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9428160B1AB3F496004EE6DF /* airplaneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = airplaneTests.m; sourceTree = "<group>"; };
+		942816151AB3F786004EE6DF /* airPlanesBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPlanesBackground.png; sourceTree = "<group>"; };
+		942816161AB3F786004EE6DF /* PLANE 8 L.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PLANE 8 L.png"; sourceTree = "<group>"; };
+		942816171AB3F786004EE6DF /* PLANE 8 N.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PLANE 8 N.png"; sourceTree = "<group>"; };
+		942816181AB3F786004EE6DF /* PLANE 8 R.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PLANE 8 R.png"; sourceTree = "<group>"; };
+		942816191AB3F786004EE6DF /* PLANE 8 SHADOW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PLANE 8 SHADOW.png"; sourceTree = "<group>"; };
+		9428161A1AB3F786004EE6DF /* PLANE PROPELLER 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PLANE PROPELLER 1.png"; sourceTree = "<group>"; };
+		9428161B1AB3F786004EE6DF /* PLANE PROPELLER 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PLANE PROPELLER 2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,13 @@
 		942815EA1AB3F496004EE6DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				942816151AB3F786004EE6DF /* airPlanesBackground.png */,
+				942816161AB3F786004EE6DF /* PLANE 8 L.png */,
+				942816171AB3F786004EE6DF /* PLANE 8 N.png */,
+				942816181AB3F786004EE6DF /* PLANE 8 R.png */,
+				942816191AB3F786004EE6DF /* PLANE 8 SHADOW.png */,
+				9428161A1AB3F786004EE6DF /* PLANE PROPELLER 1.png */,
+				9428161B1AB3F786004EE6DF /* PLANE PROPELLER 2.png */,
 				942815EB1AB3F496004EE6DF /* Info.plist */,
 				942815EC1AB3F496004EE6DF /* main.m */,
 			);
@@ -207,8 +228,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9428161D1AB3F786004EE6DF /* PLANE 8 L.png in Resources */,
+				942816201AB3F786004EE6DF /* PLANE 8 SHADOW.png in Resources */,
 				942816001AB3F496004EE6DF /* LaunchScreen.xib in Resources */,
+				9428161F1AB3F786004EE6DF /* PLANE 8 R.png in Resources */,
+				942816211AB3F786004EE6DF /* PLANE PROPELLER 1.png in Resources */,
 				942815FD1AB3F496004EE6DF /* Images.xcassets in Resources */,
+				9428161C1AB3F786004EE6DF /* airPlanesBackground.png in Resources */,
+				9428161E1AB3F786004EE6DF /* PLANE 8 N.png in Resources */,
+				942816221AB3F786004EE6DF /* PLANE PROPELLER 2.png in Resources */,
 				942815F51AB3F496004EE6DF /* GameScene.sks in Resources */,
 				942815FB1AB3F496004EE6DF /* Main.storyboard in Resources */,
 			);
@@ -358,6 +386,7 @@
 				INFOPLIST_FILE = airplane/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -368,6 +397,7 @@
 				INFOPLIST_FILE = airplane/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
