@@ -57,6 +57,12 @@
                 NSLog(@"%@", error);
             }
         }];
+        
+        // adding the smokeTrail
+        NSString *smokePath = [[NSBundle mainBundle] pathForResource:@"trail" ofType:@"sks"];
+        _smokeTrail = [NSKeyedUnarchiver unarchiveObjectWithFile:smokePath];
+        _smokeTrail.position = CGPointMake(screenWidth/2, 15);
+        [self addChild:_smokeTrail];
     }
     
     return self;
@@ -108,6 +114,8 @@
     _plane.position = CGPointMake(newX, newY);
     _planeShadow.position = CGPointMake(newXShadow, newYShadow);
     _propeller.position = CGPointMake(newXPropeller, newYPropeller);
+    
+    _smokeTrail.position = CGPointMake(newX, newY - _plane.size.height/2);
 }
 
 -(void)outputAccelertionData:(CMAcceleration)acceleration{
