@@ -68,6 +68,46 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    float maxY = screenWidth - _plane.size.width/2;
+    float minY = _plane.size.width/2;
+    
+    float maxX = screenHeight - _plane.size.height/2;
+    float minX = _plane.size.height/2;
+    
+    float newY = 0;
+    float newX = 0;
+    
+    if (currentMaxAccelX > 0.05) {
+        newX = currentMaxAccelX * 10;
+        _plane.texture = [SKTexture textureWithImageNamed:@"PLANE 8 R.png"];
+    } else if (currentMaxAccelX < -0.05){
+        newX = currentMaxAccelX * 10;
+        _plane.texture = [SKTexture textureWithImageNamed:@"PLANE 8 L.png"];
+    } else {
+        newX = currentMaxAccelX * 10;
+        _plane.texture = [SKTexture textureWithImageNamed:@"PLANE 8 N.png"];
+    }
+    
+    newY = 6.0 + currentMaxAccelY * 10;
+    
+    float newXShadow = newX + _planeShadow.position.x;
+    float newYShadow = newY + _planeShadow.position.y;
+    
+    newXShadow = MIN(MAX(newXShadow, minY + 15), maxY + 15);
+    newYShadow = MIN(MAX(newYShadow, minX - 15), maxX - 15);
+    
+    float newXPropeller = newX + _propeller.position.x;
+    float newYPropeller = newY + _propeller.position.y;
+    
+    newXPropeller = MIN(MAX(newXPropeller, minY), maxY);
+    newYPropeller = MIN(MAX(newYPropeller, minX + (_plane.size.height/2) - 5), maxX + (_plane.size.height/2) - 5);
+    
+    newX = MIN(MAX(newX + _plane.position.x, minY), maxY);
+    newY = MIN(MAX(newY + _plane.position.y, minX), maxX);
+    
+    _plane.position = CGPointMake(newX, newY);
+    _planeShadow.position = CGPointMake(newXShadow, newYShadow);
+    _propeller.position = CGPointMake(newXPropeller, newYPropeller);
 }
 
 -(void)outputAccelertionData:(CMAcceleration)acceleration{
