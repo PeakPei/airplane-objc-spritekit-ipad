@@ -29,6 +29,7 @@
 		9428162C1AB4388B004EE6DF /* PLANE 1 N.png in Resources */ = {isa = PBXBuildFile; fileRef = 942816281AB4388B004EE6DF /* PLANE 1 N.png */; };
 		9428162D1AB4388B004EE6DF /* PLANE 2 N.png in Resources */ = {isa = PBXBuildFile; fileRef = 942816291AB4388B004EE6DF /* PLANE 2 N.png */; };
 		9428162E1AB4388B004EE6DF /* SMOKE TRAIL.png in Resources */ = {isa = PBXBuildFile; fileRef = 9428162A1AB4388B004EE6DF /* SMOKE TRAIL.png */; };
+		94A509411AB5961E00905E82 /* EXPLOSION.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 94A509401AB5961E00905E82 /* EXPLOSION.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		942816281AB4388B004EE6DF /* PLANE 1 N.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PLANE 1 N.png"; sourceTree = "<group>"; };
 		942816291AB4388B004EE6DF /* PLANE 2 N.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PLANE 2 N.png"; sourceTree = "<group>"; };
 		9428162A1AB4388B004EE6DF /* SMOKE TRAIL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SMOKE TRAIL.png"; sourceTree = "<group>"; };
+		94A509401AB5961E00905E82 /* EXPLOSION.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EXPLOSION.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		942815EA1AB3F496004EE6DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94A509401AB5961E00905E82 /* EXPLOSION.atlas */,
 				942816271AB4388B004EE6DF /* B 2.png */,
 				942816281AB4388B004EE6DF /* PLANE 1 N.png */,
 				942816291AB4388B004EE6DF /* PLANE 2 N.png */,
@@ -249,6 +252,7 @@
 				9428162D1AB4388B004EE6DF /* PLANE 2 N.png in Resources */,
 				9428161D1AB3F786004EE6DF /* PLANE 8 L.png in Resources */,
 				942816201AB3F786004EE6DF /* PLANE 8 SHADOW.png in Resources */,
+				94A509411AB5961E00905E82 /* EXPLOSION.atlas in Resources */,
 				942816001AB3F496004EE6DF /* LaunchScreen.xib in Resources */,
 				9428161F1AB3F786004EE6DF /* PLANE 8 R.png in Resources */,
 				942816211AB3F786004EE6DF /* PLANE PROPELLER 1.png in Resources */,
@@ -478,6 +482,7 @@
 				942816111AB3F496004EE6DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		942816121AB3F496004EE6DF /* Build configuration list for PBXNativeTarget "airplaneTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +491,7 @@
 				942816141AB3F496004EE6DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
