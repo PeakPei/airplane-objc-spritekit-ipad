@@ -12,6 +12,9 @@
 
 -(id)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
+        self.physicsWorld.gravity = CGVectorMake(0, 0);
+        self.physicsWorld.contactDelegate = self;
+        
         // init several sizes used in all scene
         screenRect = [[UIScreen mainScreen] bounds];
         screenHeight = screenRect.size.height;
@@ -93,6 +96,12 @@
         enemy.position = CGPointMake(screenRect.size.width/2, screenRect.size.height/2);
         enemy.zPosition = 1;
         
+        enemy.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:enemy.size];
+        enemy.physicsBody.dynamic = YES;
+        enemy.physicsBody.categoryBitMask = enemyCategory;
+        enemy.physicsBody.contactTestBitMask = bulletCategory;
+        enemy.physicsBody.collisionBitMask = 0;
+        
         CGMutablePathRef cgpath = CGPathCreateMutable();
         
         // random values
@@ -135,6 +144,12 @@
     bullet.position = CGPointMake(location.x, location.y + _plane.size.height/2);
     bullet.zPosition = 1;
     bullet.scale = 0.8;
+    
+    bullet.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:bullet.size];
+    bullet.physicsBody.dynamic = NO;
+    bullet.physicsBody.categoryBitMask = bulletCategory;
+    bullet.physicsBody.contactTestBitMask = enemyCategory;
+    bullet.physicsBody.collisionBitMask = 0;
     
     SKAction *action = [SKAction moveToY:self.frame.size.height + bullet.size.height duration:2];
     SKAction *remove = [SKAction removeFromParent];
@@ -201,4 +216,23 @@
     }
 }
 
+-(void)didBeginContact:(SKPhysicsContact *)contact{
+    SKPhysicsBody *firstBody;
+    SKPhysicsBody *secondBody;
+    
+    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) {
+        firstBody = contact.bodyA;
+        secondBody = contact.bodyB;
+    } else{
+        firstBody = contact.bodyB;
+        secondBody = contact.bodyA;
+    }
+    
+    if ((firstBody.categoryBitMask & bulletCategory) != 0) {
+        SKNode *projectTile = (contact.bodyA.categoryBitMask & bulletCategory) ? contact.bodyA.node : contact.bodyB.node;
+        SKNode *enemy = (contact.bodyA.categoryBitMask & bulletCategory) ? contact.bodyB.node : contact.bodyA.node;
+        [projectTile runAction:[SKAction removeFromParent]];
+        [enemy runAction:[SKAction removeFromParent]];
+    }
+}
 @end

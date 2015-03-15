@@ -9,7 +9,10 @@
 #import <SpriteKit/SpriteKit.h>
 #import <CoreMotion/CoreMotion.h>
 
-@interface GameScene : SKScene{
+static const uint8_t bulletCategory = 1;
+static const uint8_t enemyCategory = 2;
+
+@interface GameScene : SKScene<UIAccelerometerDelegate, SKPhysicsContactDelegate>{
     CGRect screenRect;
     CGFloat screenHeight;
     CGFloat screenWidth;
