@@ -242,6 +242,17 @@
         SKNode *enemy = (contact.bodyA.categoryBitMask & bulletCategory) ? contact.bodyB.node : contact.bodyA.node;
         [projectTile runAction:[SKAction removeFromParent]];
         [enemy runAction:[SKAction removeFromParent]];
+        
+        // add explosion
+        SKSpriteNode *explosion = [SKSpriteNode spriteNodeWithTexture:[_explosionTextures objectAtIndex:0]];
+        explosion.zPosition = 1;
+        explosion.scale = 0.6;
+        explosion.position = contact.bodyA.node.position;
+        [self addChild:explosion];
+        
+        SKAction *explosionAction = [SKAction animateWithTextures:_explosionTextures timePerFrame:0.07];
+        SKAction *remove = [SKAction removeFromParent];
+        [explosion runAction:[SKAction sequence:@[explosionAction, remove]]];
     }
 }
 @end
